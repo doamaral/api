@@ -17,14 +17,11 @@ describe("Public API lists", ()=>{
         expect(count).toBe(entries);
     });
 
-    
-
-    test("should filter entries by category ls to the number of listed entries", async () => {
+    test("should evaluate entries by category Authentication & Authorization", async () => {
         const filtered = this.response.body.entries.filter(item => item.Category.includes("Authentication & Authorization"));
-        
-        expect(filtered.lenght).toBe(7);
-
+        expect(filtered.length).toBe(7);
         filtered.forEach(element => {
+            expect(element.Category).not.toBeUndefined();
             expect(element.Category).toBe("Authentication & Authorization");
         });
     });
