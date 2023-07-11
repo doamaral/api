@@ -1,0 +1,20 @@
+{
+  "name": "api.tests",
+  "version": "1.0.0",
+  "description": "api tests using javascript and supertest",
+  "main": "n",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "api",
+    "tests"
+  ],
+  "author": "Lucas Amaral",
+  "license": "ISC",
+  "devDependencies": {
+    "dotenv": "^16.3.1",
+    "jest": "^29.6.1",
+    "supertest": "^6.3.3"
+  }
+}
