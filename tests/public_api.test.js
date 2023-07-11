@@ -24,5 +24,7 @@ describe("Public API lists", ()=>{
             expect(element.Category).not.toBeUndefined();
             expect(element.Category).toBe("Authentication & Authorization");
         });
+
+        console.log(filtered);
     });
 });
