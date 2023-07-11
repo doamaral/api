@@ -16,4 +16,16 @@ describe("Public API lists", ()=>{
         const entries = this.response.body.entries.length;
         expect(count).toBe(entries);
     });
+
+    
+
+    test("should filter entries by category ls to the number of listed entries", async () => {
+        const filtered = this.response.body.entries.filter(item => item.Category.includes("Authentication & Authorization"));
+        
+        expect(filtered.lenght).toBe(7);
+
+        filtered.forEach(element => {
+            expect(element.Category).toBe("Authentication & Authorization");
+        });
+    });
 });
